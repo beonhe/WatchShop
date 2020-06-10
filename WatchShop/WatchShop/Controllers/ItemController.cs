@@ -45,7 +45,7 @@ namespace WatchShop.Controllers
             return View();
 
         }
-
+        [Authorize]
         [HttpPost]
         public ActionResult Create(Item item)
         {
@@ -54,5 +54,12 @@ namespace WatchShop.Controllers
             //luu vao database
             return View("ThongBao");
         }
+
+        public ActionResult Detail(int id)
+        {
+            Item item = dbContext.Items.Find(id);//database
+            return View("Detail", item);
+        }
+
     }
 }

@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WatchShop.Models;
 
 namespace WatchShop.Controllers
 {
     public class HomeController : Controller
     {
+        ApplicationDbContext dbContext = new ApplicationDbContext();
         public ActionResult Index()
         {
-            return View();
+            List<Item> listItem = dbContext.Items.ToList();//database
+            return View(listItem);
         }
 
         public ActionResult About()

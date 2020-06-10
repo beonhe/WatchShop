@@ -53,15 +53,13 @@
                             <div class="single-popular-items mb-50 text-center">
                                 <div class="popular-img">
                                     <img src="@Html.DisplayFor(modelItem => item.image)" alt="">
-                                    <div class="img-cap">
-                                        <span>Add to cart</span>
-                                    </div>
+
                                     <div class="favorit-items">
-                                        <span class="flaticon-heart"></span>
+                                        <a href="/Admin/DeleteItem/@item.id"><img src="~/assets/img/adapt_icon/criss-cross.png" style="width:50px; height:auto" /></a>
                                     </div>
                                 </div>
                                 <div class="popular-caption">
-                                    <h3><a href="product_details.html">@Html.DisplayFor(modelItem => item.name)</a></h3>
+                                    <h3><a href="/Admin/EditItem/@item.id">@Html.DisplayFor(modelItem => item.name)</a></h3>
                                     <span>@Html.DisplayFor(modelItem => item.price) VND</span>
                                 </div>
                             </div>

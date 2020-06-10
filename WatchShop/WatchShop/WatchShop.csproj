@@ -169,6 +169,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -193,6 +194,7 @@
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Bill.cs" />
     <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -231,6 +233,7 @@
     <Content Include="assets\img\adapt_icon\1.svg" />
     <Content Include="assets\img\adapt_icon\2.png" />
     <Content Include="assets\img\adapt_icon\3.png" />
+    <Content Include="assets\img\adapt_icon\criss-cross.png" />
     <Content Include="assets\img\author\author_1.png" />
     <Content Include="assets\img\author\author_2.png" />
     <Content Include="assets\img\author\author_3.png" />
@@ -562,6 +565,11 @@
     <Content Include="Views\Admin\Items.cshtml" />
     <Content Include="Views\Item\Create.cshtml" />
     <Content Include="Views\Item\ThongBao.cshtml" />
+    <Content Include="Views\Item\Detail.cshtml" />
+    <Content Include="Views\Admin\DeleteItem.cshtml" />
+    <Content Include="Views\Admin\ThongBao.cshtml" />
+    <Content Include="Views\Admin\EditItem.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

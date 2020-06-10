@@ -49,25 +49,10 @@
                             <nav>
                                 <ul id="navigation">
                                     <li><a href="@Url.Action("Index","Home")">Home</a></li>
-                                    <li><a href="@Url.Action("Index","Item")">shop</a></li>
                                     <li><a href="@Url.Action("About","Home")">about</a></li>
-                                    <li class="hot">
-                                        <a href="#">Latest</a>
-                                        <ul class="submenu">
-                                            <li><a href="#"> Product list</a></li>
-                                            <li><a href="#"> Product Details</a></li>
-                                        </ul>
-                                    </li>                                   
-                                    <li>
-                                        <a href="#">Pages</a>
-                                        <ul class="submenu">
-                                            <li><a href="#">Login</a></li>
-                                            <li><a href="#">Cart</a></li>
-                                            <li><a href="#">Element</a></li>
-                                            <li><a href="#">Confirmation</a></li>
-                                            <li><a href="#">Product Checkout</a></li>
-                                        </ul>
-                                    </li>
+                                                                   
+
+
                                     <li><a href="@Url.Action("Contact","Home")">Contact</a></li>
                                 </ul>
                             </nav>
@@ -79,9 +64,8 @@
                                     <div class="nav-search search-switch">
                                         <span class="flaticon-search"></span>
                                     </div>
-                                </li>
-                                <li> <a href="#"><span class="flaticon-user"></span></a></li>
-                                <li><a href="#"><span class="flaticon-shopping-cart"></span></a> </li>
+                                </li>                               
+                                <li><a href="@Url.Action("Index","Cart")"><span class="flaticon-shopping-cart"></span></a> </li>
                             </ul>
                         </div>
                     </div>

@@ -1,0 +1,36 @@
+﻿@model WatchShop.Models.Item
+
+@{
+    ViewBag.Title = "DeleteItem";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>DeleteItem</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Item</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <p><strong>Brand: </strong>@Html.DisplayFor(model => model.Brand.name)</p>
+
+        <p><strong>Category: </strong>@Html.DisplayFor(model => model.Category.name)</p>
+
+        <p><strong>Watch Name: </strong>@Html.DisplayFor(model => model.name)</p>
+
+        <p><strong>Price: </strong>@Html.DisplayFor(model => model.price)</p>
+
+        <p><strong>Image: </strong><img src="@Html.DisplayFor(model => model.image)" /></p>
+
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Items")
+        </div>
+    }
+</div>
