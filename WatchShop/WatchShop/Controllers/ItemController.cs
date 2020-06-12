@@ -52,7 +52,7 @@ namespace WatchShop.Controllers
             dbContext.Items.Add(item);
             dbContext.SaveChanges();
             //luu vao database
-            return View("ThongBao");
+            return RedirectToAction("Items", "Admin");
         }
 
         public ActionResult Detail(int id)

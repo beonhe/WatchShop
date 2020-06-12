@@ -7,14 +7,14 @@ using WatchShop.Models;
 
 namespace WatchShop.Controllers
 {
-    public class CategoryController : Controller
+    public class BrandController : Controller
     {
         ApplicationDbContext dbContext = new ApplicationDbContext();
-        // GET: Category
+        // GET: Brand
         public ActionResult Index()
         {
-            List<Category> listCategory = dbContext.Categories.ToList();//database
-            return View(listCategory);
+            List<Brand> listBrand = dbContext.Brands.ToList();//database
+            return View(listBrand);
         }
         public ActionResult Create()
         {
@@ -22,12 +22,12 @@ namespace WatchShop.Controllers
         }
         [Authorize]
         [HttpPost]
-        public ActionResult Create(Category category)
+        public ActionResult Create(Brand brand)
         {
-            dbContext.Categories.Add(category);
+            dbContext.Brands.Add(brand);
             dbContext.SaveChanges();
             //luu vao database
-            return RedirectToAction("Categories", "Admin");
+            return RedirectToAction("Brands", "Admin");
         }
     }
 }

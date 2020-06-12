@@ -108,5 +108,80 @@ namespace WatchShop.Controllers
             dbContext.SaveChanges();
             return RedirectToAction("Categories", "Admin");
         }
+
+        public ActionResult EditCategory(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Category category = dbContext.Categories.Find(id);
+            if (category == null)
+            {
+                return HttpNotFound();
+            }
+            return View(category);
+
+        }
+        [Authorize]
+        [HttpPost]
+        public ActionResult EditCategory([Bind(Include = "id,name")] Category category)
+        {
+            if (ModelState.IsValid)
+            {
+                dbContext.Entry(category).State = EntityState.Modified;
+                dbContext.SaveChanges();
+                return RedirectToAction("Categories", "Admin");
+            }
+            return View(category);
+        }
+        public ActionResult Brands()
+        {
+            List<Brand> listBrand = dbContext.Brands.ToList();//database
+            return View(listBrand);
+        }
+        public ActionResult DeleteBrand(int id)
+        {
+            Brand exitstingBrand = dbContext.Brands.Where(temp => temp.id == id).FirstOrDefault();
+            return View(exitstingBrand);
+
+        }
+        [Authorize]
+        [HttpPost]
+        public ActionResult DeleteBrand(int id, Brand brand)
+        {
+            Brand exitstingBrand = dbContext.Brands.Where(temp => temp.id == id).FirstOrDefault();
+            dbContext.Brands.Remove(exitstingBrand);
+            dbContext.SaveChanges();
+            return RedirectToAction("Brands", "Admin");
+        }
+
+        public ActionResult EditBrand(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Brand brand = dbContext.Brands.Find(id);
+            if (brand == null)
+            {
+                return HttpNotFound();
+            }
+            return View(brand);
+
+        }
+        [Authorize]
+        [HttpPost]
+        public ActionResult EditBrand([Bind(Include = "id,name")] Brand brand)
+        {
+            if (ModelState.IsValid)
+            {
+                dbContext.Entry(brand).State = EntityState.Modified;
+                dbContext.SaveChanges();
+                return RedirectToAction("Brands", "Admin");
+            }
+            return View(brand);
+        }
+
     }
 }

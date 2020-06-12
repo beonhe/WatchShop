@@ -57,7 +57,7 @@ namespace WatchShop.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
-            returnUrl = "/Admin/Items";
+            returnUrl = "/Admin/Index";
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }

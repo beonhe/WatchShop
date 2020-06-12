@@ -1,4 +1,4 @@
-﻿@model WatchShop.Models.Category
+﻿@model WatchShop.Models.Brand
 
 @{
     ViewBag.Title = "Create";
@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Category</h4>
+        <h4>Brand</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -32,5 +32,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Categories","Admin")
+    @Html.ActionLink("Back to List", "Index")
 </div>
