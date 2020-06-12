@@ -25,7 +25,8 @@ namespace WatchShop.Controllers
         }
         public ActionResult Categories()
         {
-            return View();
+            List<Category> listCategory = dbContext.Categories.ToList();//database
+            return View(listCategory);
         }
         public  ActionResult DeleteItem(int id)
         {
@@ -91,6 +92,21 @@ namespace WatchShop.Controllers
                 return RedirectToAction("Items", "Admin");
             }
             return View(item);
+        }
+        public ActionResult DeleteCategory(int id)
+        {
+            Category exitstingCategory = dbContext.Categories.Where(temp => temp.id == id).FirstOrDefault();
+            return View(exitstingCategory);
+
+        }
+        [Authorize]
+        [HttpPost]
+        public ActionResult DeleteCategory(int id, Category category)
+        {
+            Category exitstingCategory = dbContext.Categories.Where(temp => temp.id == id).FirstOrDefault();
+            dbContext.Categories.Remove(exitstingCategory);
+            dbContext.SaveChanges();
+            return RedirectToAction("Categories", "Admin");
         }
     }
 }
