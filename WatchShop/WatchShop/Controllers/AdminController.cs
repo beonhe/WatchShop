@@ -38,7 +38,7 @@ namespace WatchShop.Controllers
         [HttpPost]
         public  ActionResult DeleteItem(int id,Item item)
         {
-            Item exitstingItem = dbContext.Items.Where(temp => item.id == id).FirstOrDefault();
+            Item exitstingItem = dbContext.Items.Where(temp => temp.id == id).FirstOrDefault();
             dbContext.Items.Remove(exitstingItem);
             dbContext.SaveChanges();
             return RedirectToAction("Items","Admin");
