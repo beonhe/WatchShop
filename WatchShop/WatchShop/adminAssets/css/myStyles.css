@@ -1,0 +1,15 @@
+﻿.two-btn {
+    padding-bottom: 30px;
+}
+
+.card-text{
+    margin: 5px 0;
+}
+#cc:hover {
+    color: #4272d7 !important;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #4272d7;
+    border-color: #4272d7
+}

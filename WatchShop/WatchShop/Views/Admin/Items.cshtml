@@ -5,43 +5,34 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Items</h2>
+<button type="button" class="btn btn-primary mt-1">@Html.ActionLink("Create Item", "Create", "Item")</button>
 
-<p>
-    <button>@Html.ActionLink("Create Item", "Create", "Item")</button>
-</p>
-<section class="popular-items latest-padding">
-    <div class="container">
-        
-        <!-- Nav Card -->
-
-        <div class="tab-content" id="nav-tabContent">
-            <!-- card one -->
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                <div class="row">
+<div class="row mt-4">
+    <div class="col-lg-12">
+        <div class="table-responsive table--no-card m-b-30">
+            <table class="table table-borderless table-striped table-earning">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Image</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
                     @foreach (var item in Model)
                     {
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                            <div class="single-popular-items mb-50 text-center">
-                                <div class="popular-img">
-                                    <img src="@Html.DisplayFor(modelItem => item.image)" alt="">
-
-                                    <div class="favorit-items">
-                                        <a href="/Item/Delete/@item.id"><img src="~/assets/img/adapt_icon/criss-cross.png" style="width:50px; height:auto" /></a>
-                                    </div>
-                                </div>
-                                <div class="popular-caption">
-                                    <h3><a href="/Item/Edit/@item.id">@Html.DisplayFor(modelItem => item.name)</a></h3>
-                                    <span>@Html.DisplayFor(modelItem => item.price) VND</span>
-                                </div>
-                            </div>
-                        </div>
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.name)</td>
+                            <td><img src="@Html.DisplayFor(modelItem => item.image)" style="width:50px;height:auto;"></td>
+                            <td>@Html.DisplayFor(modelItem => item.price)</td>
+                            <td>
+                                <pre style="font-size: 16px; font-family: Poppins, sans-serif; color: #808080;">@Html.ActionLink("Edit", "Edit", "Item", new { id = item.id },new { id = "cc", Style = "color: #808080"})  | @Html.ActionLink("Delete", "Delete","Item",new { id = item.id },new {id = "cc", Style = "color: #808080"})</pre>
+                            </td>
+                        </tr>
                     }
-                </div>
-            </div>
+                </tbody>
+            </table>
         </div>
-
     </div>
-
-    <!-- End Nav Card -->
-</section>
+</div>
