@@ -567,19 +567,22 @@
     <Content Include="Views\Admin\Items.cshtml" />
     <Content Include="Views\Item\Create.cshtml" />
     <Content Include="Views\Item\Detail.cshtml" />
-    <Content Include="Views\Admin\DeleteItem.cshtml" />
-    <Content Include="Views\Admin\ThongBao.cshtml" />
-    <Content Include="Views\Admin\EditItem.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
     <Content Include="Views\Category\Create.cshtml" />
-    <Content Include="Views\Admin\DeleteCategory.cshtml" />
-    <Content Include="Views\Admin\EditCategory.cshtml" />
     <Content Include="Views\Brand\Index.cshtml" />
     <Content Include="Views\Admin\Brands.cshtml" />
-    <Content Include="Views\Admin\DeleteBrand.cshtml" />
-    <Content Include="Views\Admin\EditBrand.cshtml" />
     <Content Include="Views\Brand\Create.cshtml" />
+    <Content Include="Views\Brand\Edit.cshtml" />
+    <Content Include="Views\Brand\Delete.cshtml" />
+    <Content Include="Views\Category\Delete.cshtml" />
+    <Content Include="Views\Category\Edit.cshtml" />
+    <Content Include="Views\Item\Delete.cshtml" />
+    <Content Include="Views\Item\Edit.cshtml" />
+    <Content Include="Views\Category\ListCategory.cshtml" />
+    <Content Include="Views\Item\ItemByCategory.cshtml" />
+    <Content Include="Views\Brand\ListBrand.cshtml" />
+    <Content Include="Views\Item\ItemByBrand.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

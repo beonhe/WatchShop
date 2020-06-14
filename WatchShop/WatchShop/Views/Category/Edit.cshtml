@@ -1,11 +1,11 @@
 ﻿@model WatchShop.Models.Category
 
 @{
-    ViewBag.Title = "EditCategory";
+    ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>EditCategory</h2>
+<h2>Edit Category</h2>
 
 @using (Html.BeginForm())
 {
@@ -34,5 +34,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Categories")
+    @Html.ActionLink("Back to List", "Categories","Admin")
 </div>

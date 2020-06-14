@@ -49,10 +49,19 @@
                             <nav>
                                 <ul id="navigation">
                                     <li><a href="@Url.Action("Index","Home")">Home</a></li>
+                                    <li>
+                                        <a href="#">Category</a>
+                                        <ul class="submenu">
+                                            @Html.Action("ListCategory", "Category")
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Brand</a>
+                                        <ul class="submenu">
+                                            @Html.Action("ListBrand", "Brand")
+                                        </ul>
+                                    </li>
                                     <li><a href="@Url.Action("About","Home")">about</a></li>
-                                                                   
-
-
                                     <li><a href="@Url.Action("Contact","Home")">Contact</a></li>
                                 </ul>
                             </nav>
@@ -83,6 +92,7 @@
         <div class="container">
             @RenderBody()
         </div>
+
         <!-- Shop Method End-->
     </main>
     <footer>

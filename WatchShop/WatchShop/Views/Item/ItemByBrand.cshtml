@@ -1,27 +1,11 @@
 ﻿@model IEnumerable<WatchShop.Models.Item>
-
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "ItemByBrand";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="slider-area ">
-    <div class="single-slider slider-height2 d-flex align-items-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="hero-cap text-center">
-                        <h2>Watch Shop</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Hero Area End-->
-<!-- Latest Products Start -->
 <section class="popular-items latest-padding">
-    <div class="container">             
+    <div class="container">
         <div class="tab-content" id="nav-tabContent">
             <!-- card one -->
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -40,20 +24,18 @@
                                     </div>
                                 </div>
                                 <div class="popular-caption">
-                                    <h3><a href="/Item/Detail/@item.id">@Html.DisplayFor(modelItem => item.name)</a></h3>                    
+                                    <h3><a href="/Item/Detail/@item.id">@Html.DisplayFor(modelItem => item.name)</a></h3>
                                     <span>@Html.DisplayFor(modelItem => item.price) VND</span>
                                 </div>
                             </div>
                         </div>
                     }
-                    </div>
+                </div>
             </div>
         </div>
-       
+
     </div>
 
-        <!-- End Nav Card -->
+    <!-- End Nav Card -->
 </section>
 
-
-    

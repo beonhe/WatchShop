@@ -220,4 +220,3 @@ C:\Users\THUAN\Desktop\WatchShop\WatchShop\WatchShop\obj\Debug\WatchShop.csproj.
 C:\Users\THUAN\Desktop\WatchShop\WatchShop\WatchShop\obj\Debug\WatchShop.csproj.CopyComplete
 C:\Users\THUAN\Desktop\WatchShop\WatchShop\WatchShop\obj\Debug\WatchShop.dll
 C:\Users\THUAN\Desktop\WatchShop\WatchShop\WatchShop\obj\Debug\WatchShop.pdb
-C:\Users\THUAN\Desktop\WatchShop\WatchShop\WatchShop\obj\Debug\WatchShop.csprojAssemblyReference.cache

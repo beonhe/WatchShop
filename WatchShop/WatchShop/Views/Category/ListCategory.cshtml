@@ -1,0 +1,12 @@
+﻿@model IEnumerable<WatchShop.Models.Category>
+
+@foreach (var category in Model)
+{
+    <div class="input-checkbox">
+        <label for="category-1">
+            <span></span>
+            <a href="@Url.Action("ItemByCategory", "Item", new { id = category.id })">@category.name</a>
+        </label>
+    </div>
+}
+
